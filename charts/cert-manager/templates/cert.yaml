@@ -7,7 +7,7 @@ spec:
   secretName: wildcard-tls-secret
   dnsNames:
     {{- range .Values.certificate.dnsNames }}
-    - {{ . }}
+    - "{{ . }}"
     {{- end }}
   issuerRef:
     name: cluster-issuer
