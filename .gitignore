@@ -1,0 +1,10 @@
+Chart.lock
+charts/*/charts/
+
+password.txt
+root-token
+
+.DS_Store
+
+charts/argocd/repo-creds.yaml
+secret.yaml
