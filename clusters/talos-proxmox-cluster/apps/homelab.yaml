@@ -9,5 +9,4 @@ spec:
     kind: GitRepository
     name: homelab
   chart: ./charts/metallb
-  prune: true
   timeout: 1m
