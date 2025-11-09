@@ -1,0 +1,9 @@
+apiVersion: v2
+name: kube-prometheus-stack
+description: Self hosted kube-prometheus-stack
+version: 1.0.0
+type: application
+dependencies:
+  - name: kube-prometheus-stack
+    version: 79.4.1
+    repository: https://prometheus-community.github.io/helm-charts
