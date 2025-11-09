@@ -1,0 +1,5 @@
+metrics-server:
+  tls:
+    type: existingSecret
+    existingSecret:
+      name: wildcard-tls-secret
