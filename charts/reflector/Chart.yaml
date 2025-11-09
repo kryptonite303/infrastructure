@@ -1,0 +1,9 @@
+apiVersion: v2
+name: reflector
+description: Self hosted reflector
+version: 1.0.0
+type: application
+dependencies:
+  - name: reflector
+    version: 9.1.38
+    repository: https://emberstack.github.io/helm-charts
