@@ -1,6 +1,6 @@
-argocd:
+argo-cd:
   global:
     domain: argocd.k8s.johnchen.dev
   configs:
-    params: |
-      server.insecure: "true"
+    params:
+      server.insecure: true
