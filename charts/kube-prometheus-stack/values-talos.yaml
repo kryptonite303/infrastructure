@@ -2,6 +2,8 @@ kube-prometheus-stack:
   grafana:
     ingress:
       enabled: true
+      hosts:
+        - grafana.k8s.johnchen.dev
     tls:
       - secretName: wildcard-tls-secret
         hosts:
