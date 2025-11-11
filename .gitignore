@@ -1,5 +1,6 @@
 Chart.lock
 charts/*/charts/
+apps/*/charts/
 
 password.txt
 root-token

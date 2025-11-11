@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values-talos.yaml
-    path: charts/metallb
+    path: apps/metallb
     repoURL: https://github.com/kryptonite303/infrastructure.git
     targetRevision: HEAD
   syncPolicy:

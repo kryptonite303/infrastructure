@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
       - values-talos.yaml
-    path: charts/kube-prometheus-stack
+    path: apps/kube-prometheus-stack
     repoURL: https://github.com/kryptonite303/infrastructure.git
     targetRevision: HEAD
   syncPolicy:

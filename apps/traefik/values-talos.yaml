@@ -1,0 +1,8 @@
+deployment:
+  dnsConfig:
+    nameservers:
+      - 192.168.1.122
+      - 192.168.1.169
+    searches:
+      - johnchen.dev
+      - grange.johnchen.dev

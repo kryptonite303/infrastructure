@@ -1,0 +1,9 @@
+apiVersion: v2
+name: authentik
+description: Self hosted authentik
+version: 1.0.0
+type: application
+dependencies:
+  - name: authentik
+    version: 2025.10.1
+    repository: https://charts.goauthentik.io/
