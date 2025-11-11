@@ -2,6 +2,7 @@ certificate:
   name: wildcard-k8s-johnchen-dev
   dnsNames:
     - "*.k8s.johnchen.dev"
+    - "*.johnchen.dev"
   annotations:
     reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
     reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "monitoring,argocd,metrics-server"
