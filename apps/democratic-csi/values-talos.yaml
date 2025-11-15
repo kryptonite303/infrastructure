@@ -7,12 +7,18 @@ democratic-csi:
     driver:
       image:
         tag: next
+      extraEnv:
+        - name: ISCSIADM_HOST_STRATEGY
+          value: nsenter
+        - name: ISCSIADM_HOST_PATH
+          value: /usr/local/sbin/iscsiadm
+      iscsiDirHostPath: /var/iscsi
+      iscsiDirHostPathType: ""
   csiDriver:
     name: "org.democratic-csi.iscsi"
     driver:
       image:
         tag: next
-  
   storageClasses:
     - name: freenas-iscsi-csi
       defaultClass: false
