@@ -4,6 +4,7 @@ democratic-csi:
       image:
         tag: next
   node:
+    hostPID: true
     driver:
       image:
         tag: next
