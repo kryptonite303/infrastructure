@@ -1,0 +1,67 @@
+democratic-csi:
+  controller:
+    driver:
+      image:
+        tag: next
+  node:
+    driver:
+      image:
+        tag: next
+  csiDriver:
+    name: "org.democratic-csi.iscsi"
+    driver:
+      image:
+        tag: next
+  
+  storageClasses:
+    - name: freenas-iscsi-csi
+      defaultClass: false
+      reclaimPolicy: Delete
+      volumeBindingMode: Immediate
+      allowVolumeExpansion: true
+      parameters:
+        fsType: ext4
+      mountOptions: []
+      secrets:
+        provisioner-secret:
+        controller-publish-secret:
+        node-stage-secret:
+        node-publish-secret:
+        controller-expand-secret:
+  volumeSnapshotClasses: []
+  driver:
+    image:
+      tag: next
+    config:
+      driver: freenas-api-iscsi
+      instance_id:
+      httpConnection:
+        protocol: http
+        host: 192.168.1.14
+        port: 80
+        apiKey: 1-3aaWWckf0CxnBtgU9xH0d2gxjmTX01NkStxr87cvldiy8zQNPoymRUToeUlWS7uw
+        allowInsecure: true
+      zfs:
+        datasetParentName: hdd_pool/k8s/iscsi/v
+        detachedSnapshotsDatasetParentName: hdd_pool/k8s/iscsi/s
+        zvolCompression:
+        zvolDedup:
+        zvolEnableReservation: false
+        zvolBlocksize:
+      iscsi:
+        targetPortal: "192.168.1.14:3260"
+        targetPortals: []
+        interface:
+        namePrefix: csi-
+        nameSuffix: "-clustera"
+        targetGroups:
+          - targetGroupPortalGroup: 1
+            targetGroupInitiatorGroup: 1
+            targetGroupAuthType: None
+            targetGroupAuthGroup:
+        extentInsecureTpc: true
+        extentXenCompat: false
+        extentDisablePhysicalBlocksize: true
+        extentBlocksize: 512
+        extentRpm: "SSD"
+        extentAvailThreshold: 0
