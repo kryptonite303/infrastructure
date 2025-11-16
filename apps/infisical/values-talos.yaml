@@ -1,1 +1,21 @@
 infisical:
+  infisical:
+    autoBootstrap:
+      enabled: true
+  ingress:
+    hostName: infisical.k8s.johnchen.dev
+    ingressClassName: traefik
+    nginx:
+      enabled: false
+    tls:
+      - secretName: wildcard-tls-secret
+        hosts:
+          - infisical.k8s.johnchen.dev
+  postgresql:
+    enabled: false
+    useExistingPostgresSecret:
+      enabled: true
+      name: "infisical-app"
+      key: "fqdn-uri"
+  redis:
+    enabled: false
