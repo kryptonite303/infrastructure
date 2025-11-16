@@ -1,0 +1,9 @@
+apiVersion: v2
+name: valkey
+description: Self hosted valkey
+version: 1.0.0
+type: application
+dependencies:
+  - name: valkey
+    version: 0.7.7
+    repository: https://valkey.io/valkey-helm/
