@@ -21,8 +21,8 @@ democratic-csi:
       image:
         tag: next
   storageClasses:
-    - name: freenas-iscsi-csi
-      defaultClass: true
+    - name: iscsi
+      defaultClass: false
       reclaimPolicy: Delete
       volumeBindingMode: Immediate
       allowVolumeExpansion: true
