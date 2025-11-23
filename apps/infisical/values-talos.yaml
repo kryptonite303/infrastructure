@@ -13,8 +13,5 @@ infisical:
     useExistingPostgresSecret:
       enabled: true
       existingConnectionStringSecret:
-	key:
-      name: "infisical-app"
-      key: "fqdn-uri"
-  redis:
-    enabled: false
+        key: "temp"
+        name: "infisical-app"
