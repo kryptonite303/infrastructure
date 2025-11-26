@@ -1,4 +1,4 @@
-infisical:
+infisical-standalone:
   ingress:
     hostName: infisical.k8s.johnchen.dev
     ingressClassName: traefik
