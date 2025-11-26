@@ -13,5 +13,5 @@ infisical-standalone:
     useExistingPostgresSecret:
       enabled: true
       existingConnectionStringSecret:
-        key: "temp"
+        key: "uri"
         name: "infisical-app"
