@@ -16,7 +16,7 @@ democratic-csi:
       iscsiDirHostPath: /var/iscsi
       iscsiDirHostPathType: ""
   csiDriver:
-    name: "org.democratic-csi.iscsi"
+    name: "iscsi"
     driver:
       image:
         tag: next
