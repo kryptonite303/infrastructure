@@ -28,8 +28,6 @@ democratic-csi:
       allowVolumeExpansion: true
       parameters:
         fsType: ext4
-      mountOptions:
-        - nolock
       secrets:
         provisioner-secret:
         controller-publish-secret:
