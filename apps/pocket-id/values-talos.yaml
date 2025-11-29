@@ -1,0 +1,14 @@
+pocket-id:
+  ingress:
+    enabled: true
+    hostName: pocket-id.k8s.johnchen.dev
+    ingressClassName: traefik
+    tls:
+      - secretName: wildcard-tls-secret
+        hosts:
+          - pocket-id.k8s.johnchen.dev
+  persistence:
+    enabled: true
+  config:
+    APP_URL: "https://pocket-id.k8s.johnchen.dev"
+    TRUST_PROXY: true

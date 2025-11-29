@@ -1,0 +1,9 @@
+apiVersion: v2
+name: pocket-id
+description: Self hosted pocket id
+version: 1.0.0
+type: application
+dependencies:
+  - name: pocket-id
+    version: 1.15.0
+    repository: oci://ghcr.io/hobbit44/pocket-id-helm
