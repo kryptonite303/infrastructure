@@ -1,4 +1,6 @@
 pocket-id:
+  image:
+    tag: v1.15.0
   ingress:
     enabled: true
     hostName: pocket-id.k8s.johnchen.dev
