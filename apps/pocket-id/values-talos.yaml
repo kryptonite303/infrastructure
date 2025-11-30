@@ -13,4 +13,4 @@ pocket-id:
     enabled: true
   config:
     publicAppUrl: "https://pocket-id.k8s.johnchen.dev"
-    trustProxy: true
+    trustProxy: "true"
