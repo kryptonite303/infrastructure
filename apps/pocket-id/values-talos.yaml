@@ -1,15 +1,15 @@
 pocket-id:
-  image:
-    tag: v1.15.0
+  pocketID:
+    image:
+      tag: v1.15.0
   ingress:
     enabled: true
-    hostName: pocket-id.k8s.johnchen.dev
-    ingressClassName: traefik
+    host: pocket-id.k8s.johnchen.dev
+    className: traefik
     tls:
       - secretName: wildcard-tls-secret
         hosts:
           - pocket-id.k8s.johnchen.dev
   persistence:
-    enabled: true
-  config:
-    publicAppUrl: "https://pocket-id.k8s.johnchen.dev"
+    data:
+      enabled: true

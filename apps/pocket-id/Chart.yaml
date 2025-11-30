@@ -5,5 +5,5 @@ version: 1.0.0
 type: application
 dependencies:
   - name: pocket-id
-    version: 1.15.0
-    repository: oci://ghcr.io/hobbit44/pocket-id-helm
+    version: 1.7.2
+    repository: https://anza-labs.github.io/charts
