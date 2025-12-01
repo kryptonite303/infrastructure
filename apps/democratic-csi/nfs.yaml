@@ -1,3 +1,4 @@
+namespaceOwner: false
 democratic-csi:
   csiDriver:
     name: "nfs"
