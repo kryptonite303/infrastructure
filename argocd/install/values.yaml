@@ -15,6 +15,11 @@ argo-cd:
               clientID: $dex.pocketid.clientID
               clientSecret: $dex.pocketid.clientSecret
               redirectURI: https://argocd.k8s.johnchen.dev/api/dex/callback
+              insecureEnableGroups: true
+              scopes:
+                - profile
+                - email
+                - groups
     rbac:
       policy.default: 'role:readonly'
       policy.csv: |
