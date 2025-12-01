@@ -4,3 +4,19 @@ argo-cd:
   configs:
     params:
       server.insecure: true
+    cm:
+      dex.config: |
+        connectors:
+          - type: oidc
+            id: pocketid
+            name: Pocket ID
+            config:
+              issuer: https://pocket-id.k8s.johnchen.dev
+              clientID: $dex.pocketid.clientID
+              clientSecret: $dex.pocketid.clientSecret
+              redirectURI: https://argocd.k8s.johnchen.dev/api/dex/callback
+    rbac:
+      policy.default: 'role:readonly'
+      policy.csv: |
+        g, argocd_admins, role: admin
+      scopes: '[groups, email]'
