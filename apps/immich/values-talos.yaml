@@ -26,6 +26,10 @@ immich:
         enabled: true
         hosts:
           - host: immich.k8s.johnchen.dev
+            paths:
+              - path: "/"
+                service:
+                  identifier: main
         tls:
           - secretName: wildcard-tls-secret
             hosts:
