@@ -1,0 +1,9 @@
+apiVersion: v2
+name: immich
+description: Self hosted immich
+version: 1.0.0
+type: application
+dependencies:
+  - name: immich
+    version: 0.10.3
+    repository: https://immich-app.github.io/immich-charts

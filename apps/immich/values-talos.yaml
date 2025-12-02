@@ -1,0 +1,36 @@
+immich:
+  controllers:
+    main:
+      containers:
+        main:
+          image:
+            tag: v2.3.1
+          env:
+            DB_HOSTNAME:
+              valueFrom:
+                secretKeyRef:
+                  name: immich-app
+                  key: host
+            DB_USERNAME: app
+            DB_DATABASE_NAME: app
+            DB_PASSWORD:
+              valueFrom:
+                secretKeyRef:
+                  name: immich-app
+                  key: password
+  valkey:
+    enabled: true
+  server:
+    ingress:
+      main:
+        enabled: true
+        hosts:
+          - host: immich.k8s.johnchen.dev
+        tls:
+          - secretName: wildcard-tls-secret
+            hosts:
+              - immich.k8s.johnchen.dev
+  immich:
+    persistence:
+      library:
+        existingClaim: "immich"
