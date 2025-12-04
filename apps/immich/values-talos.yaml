@@ -6,11 +6,7 @@ immich:
           image:
             tag: v2.3.1
           env:
-            DB_HOSTNAME:
-              valueFrom:
-                secretKeyRef:
-                  name: immich-app
-                  key: host
+            DB_HOSTNAME: immich-rw
             DB_USERNAME: app
             DB_DATABASE_NAME: app
             DB_PASSWORD:
