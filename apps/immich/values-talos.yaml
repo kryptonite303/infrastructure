@@ -12,7 +12,7 @@ immich:
             DB_PASSWORD:
               valueFrom:
                 secretKeyRef:
-                  name: immich-app
+                  name: superuser-secret
                   key: password
   valkey:
     enabled: true
