@@ -7,8 +7,8 @@ immich:
             tag: v2.3.1
           env:
             DB_HOSTNAME: immich-rw
-            DB_USERNAME: app
-            DB_DATABASE_NAME: app
+            DB_USERNAME: immich
+            DB_DATABASE_NAME: immich
             DB_PASSWORD:
               valueFrom:
                 secretKeyRef:
