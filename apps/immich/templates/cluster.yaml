@@ -10,6 +10,7 @@ spec:
     storageClass: iscsi
   superuserSecret:
     name: superuser-secret
+  enableSuperuserAccess: true
   bootstrap:
     initdb:
       database: immich
