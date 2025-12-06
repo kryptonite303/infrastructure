@@ -13,9 +13,3 @@ spec:
   enableSuperuserAccess: true
   postgresql:
     enableAlterSystem: true
-  bootstrap:
-    initdb:
-      database: immich
-      owner: postgres
-      secret:
-        name: superuser-secret
