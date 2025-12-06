@@ -11,6 +11,8 @@ spec:
   superuserSecret:
     name: superuser-secret
   enableSuperuserAccess: true
+  postgresql:
+    enableAlterSystem: true
   bootstrap:
     initdb:
       database: immich
