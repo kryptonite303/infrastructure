@@ -13,3 +13,5 @@ spec:
   enableSuperuserAccess: true
   postgresql:
     enableAlterSystem: true
+    shared_preload_libraries:
+      - "vchord.so"
