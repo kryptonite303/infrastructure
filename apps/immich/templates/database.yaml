@@ -9,3 +9,4 @@ spec:
     name: immich
   extensions:
   - name: vector
+    ensure: present
