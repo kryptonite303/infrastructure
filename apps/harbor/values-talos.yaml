@@ -4,10 +4,10 @@ harbor:
       certSource: secret
       secret:
         secretName: wildcard-tls-secret
-  ingress:
-    hosts:
-      core: harbor.k8s.johnchen.dev
-      className: traefik
+    ingress:
+      hosts:
+        core: harbor.k8s.johnchen.dev
+        className: traefik
   externalURL: https://harbor.k8s.johnchen.dev
   persistence:
     persistentVolumeClaim:
