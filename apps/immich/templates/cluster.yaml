@@ -15,3 +15,11 @@ spec:
     enableAlterSystem: true
     shared_preload_libraries:
       - "vchord.so"
+  managed:
+    roles:
+      - name: immich
+        ensure: present
+        login: true
+        superuser: true
+        passwordSecret:
+          name: superuser-secret
