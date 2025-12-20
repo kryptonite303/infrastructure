@@ -4,7 +4,7 @@ metadata:
   name: immich
 spec:
   instances: 1
-  imageName: ghcr.io/cloudnative-pg/postgresql:18
+  imageName: ghcr.io/tensorchord/cloudnative-vectorchord:18
   storage:
     size: 50Gi
     storageClass: iscsi
@@ -13,14 +13,16 @@ spec:
   enableSuperuserAccess: true
   postgresql:
     shared_preload_libraries:
-      - vectorchord
+      - "vchord.so"
+  bootstrap:
+    initdb:
+      postInitSQL:
+        - CREATE EXTENSION IF NOT EXISTS vchord CASCADE;
   managed:
     roles:
-      - name: immich
-        connectionLimit: -1
-        inherit: true
-        ensure: present
-        login: true
-        superuser: true
-        passwordSecret:
-          name: superuser-secret
+    - name: immich
+      ensure: present
+      login: true
+      superuser: true
+      inherit: true
+      connectionLimit: -1
