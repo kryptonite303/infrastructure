@@ -4,7 +4,7 @@ metadata:
   name: immich
 spec:
   instances: 1
-  imageName: ghcr.io/tensorchord/cloudnative-vectorchord:18
+  imageName: ghcr.io/cloudnative-pg/postgresql:18
   storage:
     size: 50Gi
     storageClass: iscsi
@@ -12,9 +12,8 @@ spec:
     name: superuser-secret
   enableSuperuserAccess: true
   postgresql:
-    enableAlterSystem: true
     shared_preload_libraries:
-      - "vchord.so"
+      - vectorchord
   managed:
     roles:
       - name: immich
