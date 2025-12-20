@@ -18,6 +18,8 @@ spec:
   managed:
     roles:
       - name: immich
+        connectionLimit: -1
+        inherit: true
         ensure: present
         login: true
         superuser: true
