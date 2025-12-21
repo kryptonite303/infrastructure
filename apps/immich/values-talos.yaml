@@ -18,6 +18,12 @@ immich:
   valkey:
     enabled: true
   server:
+    controllers:
+      main:
+        containers:
+          main:
+            image:
+              repository: harbor.k8s.johnchen.dev/library/immich
     ingress:
       main:
         enabled: true
