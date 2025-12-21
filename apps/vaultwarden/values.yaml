@@ -1,0 +1,30 @@
+vaultwarden:
+  timeZone: "America/New_York"
+  ingress:
+    enabled: true
+    class: "traefik"
+    nginxIngressAnnotations: false
+    hostname: vaultwarden.k8s.johnchen.dev
+    tlsSecret: wildcard-tls-secret
+  database:
+    type: postgresql
+    host: vaultwarden-rw
+    port: 5432
+    username: postgres
+    existingSecret: superuser-secret
+    existingSecretPasswordKey: password
+  storage:
+    data:
+      name: "vaultwarden-data"
+      size: "15Gi"
+      class: "nfs"
+      path: "/data"
+      keepPvc: false
+      accessMode: "ReadWriteOnce"
+    attachments:
+      name: "vaultwarden-files"
+      size: "100Gi"
+      class: "nfs"
+      path: /files
+      keepPvc: false
+      accessMode: "ReadWriteOnce"

@@ -1,0 +1,13 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: vaultwarden
+spec:
+  instances: 1
+  imageName: ghcr.io/cloudnative-pg/postgresql:18
+  storage:
+    size: 50Gi
+    storageClass: iscsi
+  superuserSecret:
+    name: superuser-secret
+  enableSuperuserAccess: true
