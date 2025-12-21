@@ -5,7 +5,7 @@ immich:
         main:
           image:
             repository: harbor.k8s.johnchen.dev/library/immich
-            tag: 2.4.1
+            tag: v2.4.1
           env:
             DB_HOSTNAME: immich-rw
             DB_USERNAME: postgres
