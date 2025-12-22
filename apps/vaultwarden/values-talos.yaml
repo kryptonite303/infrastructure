@@ -1,4 +1,5 @@
 vaultwarden:
+  domain: https://vaultwarden.k8s.johnchen.dev
   timeZone: "America/New_York"
   ingress:
     enabled: true
