@@ -10,8 +10,8 @@ vaultwarden:
     type: postgresql
     host: vaultwarden-rw
     port: 5432
-    username: postgres
-    existingSecret: superuser-secret
+    existingSecret: vaultwarden-db-app
+    existingSecretUserKey: username
     existingSecretPasswordKey: password
   storage:
     data:
