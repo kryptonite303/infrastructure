@@ -9,7 +9,7 @@ vaultwarden:
     tlsSecret: wildcard-tls-secret
   database:
     type: postgresql
-    host: vaultwarden-rw
+    host: vaultwarden-db-rw
     port: 5432
     existingSecret: vaultwarden-db-app
     existingSecretUserKey: username
