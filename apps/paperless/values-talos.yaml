@@ -1,0 +1,25 @@
+app-template:
+  controllers:
+    main:
+      type: deployment
+      replicas: 1
+      containers:
+        main:
+          image:
+            repository: paperlessngx/paperless-ngx
+            tag: "1.27"
+  service:
+    main:
+      controller: main
+      ports:
+        http:
+          port: 8000
+  persistence:
+    data:
+      suffix: data
+      storageClass: nfs
+      accessMode: ReadWriteOnce
+      size: 30Gi
+      retain: true
+      globalMounts:
+        - path: /usr/src/paperless/
