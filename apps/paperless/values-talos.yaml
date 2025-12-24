@@ -48,6 +48,7 @@ app-template:
       enabled: true
       storageClass: smb
       size: 1Gi
+      existingClaim: paperless-consume
       globalMounts:
         - path: /usr/src/paperless/consume
       accessMode: ReadWriteOnce
