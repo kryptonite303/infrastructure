@@ -6,7 +6,7 @@ app-template:
       containers:
         main:
           image:
-            repository: ghcr.io/paperlessngx/paperless-ngx
+            repository: ghcr.io/paperless-ngx/paperless-ngx
             tag: "2.20"
   service:
     main:
