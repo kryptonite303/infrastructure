@@ -39,3 +39,7 @@ app-template:
         - secretName: wildcard-tls-secret
           hosts:
             - paperless.k8s.johnchen.dev
+valkey:
+  dataStorage:
+    enabled: true
+    className: nfs
