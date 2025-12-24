@@ -15,5 +15,6 @@ spec:
     roles:
       - name: paperless
         ensure: present
+        login: true
         passwordSecret:
           value: paperless-db
