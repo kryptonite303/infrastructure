@@ -15,6 +15,7 @@ app-template:
             PAPERLESS_REDIS: redis://paperless-valkey:6379
             PAPERLESS_DBENGINE: postgresql
             PAPERLESS_URL: https://paperless.k8s.johnchen.dev
+            PAPERLESS_CONSUMPTION_DIR: /usr/src/paperless/consume
   service:
     main:
       controller: main
@@ -43,6 +44,12 @@ app-template:
       globalMounts:
         - path: /usr/src/paperless/export
       accessMode: ReadWriteOnce
+    consume:
+      enabled: true
+      storageClass: smb
+      size: 1Gi
+      globalMounts:
+        - path: /usr/src/paperless/consume
   ingress:
     main:
       enabled: true
