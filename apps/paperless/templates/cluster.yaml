@@ -11,3 +11,10 @@ spec:
   superuserSecret:
     name: superuser-secret
   enableSuperuserAccess: true
+  managed:
+    roles:
+      - name: paperless
+        login: true
+        password:
+          type: Password
+          value: paperless
