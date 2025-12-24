@@ -5,6 +5,10 @@ metadata:
 provisioner: smb.csi.k8s.io
 parameters:
   source: "//192.168.1.14/shared/pvc-fd909158-69ef-4ee2-998a-d374fc24d510"
+  csi.storage.k8s.io/provisioner-secret-name: smb-credentials
+  csi.storage.k8s.io/provisioner-secret-namespace: csi-driver-smb
+  csi.storage.k8s.io/node-stage-secret-name: smb-credentials
+  csi.storage.k8s.io/node-stage-secret-namespace: csi-driver-smb
 mountOptions:
   - vers=3.1.1
   - serverino
