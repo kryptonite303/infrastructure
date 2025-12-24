@@ -14,7 +14,6 @@ spec:
   managed:
     roles:
       - name: paperless
-        login: true
-        password:
-          type: Password
-          value: paperless
+        ensure: present
+        passwordSecret:
+          value: paperless-db
