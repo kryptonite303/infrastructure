@@ -14,6 +14,7 @@ app-template:
             PAPERLESS_DBHOST: paperless-db-rw
             PAPERLESS_REDIS: redis://paperless-valkey:6379
             PAPERLESS_DBENGINE: postgresql
+            PAPERLESS_URL: https://paperless.k8s.johnchen.dev
   service:
     main:
       controller: main
