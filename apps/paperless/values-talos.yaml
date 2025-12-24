@@ -22,17 +22,26 @@ app-template:
           port: 8000
   persistence:
     data:
+      enabled: true
       storageClass: nfs
       size: 1Gi
-      mountPath: /usr/src/paperless/data
+      globalMounts:
+        - path: /usr/src/paperless/data
+      accessMode: ReadWriteOnce
     media:
+      enabled: true
       storageClass: nfs
       size: 8Gi
-      mountPath: /usr/src/paperless/media
+      globalMounts:
+        - path: /usr/src/paperless/media
+      accessMode: ReadWriteOnce
     export:
+      enabled: true
       storageClass: nfs
       size: 1Gi
-      mountPath: /usr/src/paperless/export
+      globalMounts:
+        - path: /usr/src/paperless/export
+      accessMode: ReadWriteOnce
   ingress:
     main:
       enabled: true
