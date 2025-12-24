@@ -17,4 +17,4 @@ spec:
         ensure: present
         login: true
         passwordSecret:
-          value: paperless-db
+          name: paperless-db
