@@ -8,8 +8,8 @@ spec:
     - group: apps
       kind: StatefulSet
       jqPathExpressions:
-        - .spec.volumeClaimTemplates
-        - .spec.updateStrategy
+        - .spec.volumeClaimTemplates[]
+        - .spec.updateStrategy.rollingUpdate
   destination:
     namespace: pocket-id
     server: https://kubernetes.default.svc
