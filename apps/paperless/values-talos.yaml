@@ -50,6 +50,7 @@ app-template:
       size: 1Gi
       globalMounts:
         - path: /usr/src/paperless/consume
+      accessMode: ReadWriteOnce
   ingress:
     main:
       enabled: true
