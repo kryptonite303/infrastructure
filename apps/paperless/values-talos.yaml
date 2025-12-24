@@ -11,7 +11,7 @@ app-template:
           env:
             TZ: America/New_York
             PAPERLESS_CONSUMER_POLLING: "10"
-            PAPERLESS_DBHOST: postgres-db-rw
+            PAPERLESS_DBHOST: paperless-db-rw
             PAPERLESS_REDIS: redis://paperless-valkey:6379
             PAPERLESS_DBENGINE: postgresql
   service:
