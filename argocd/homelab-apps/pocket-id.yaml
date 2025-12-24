@@ -4,6 +4,12 @@ metadata:
   name: pocket-id
   namespace: argocd
 spec:
+  ignoreDifferences:
+    - group: apps
+      kind: StatefulSet
+      jqPathExpressions:
+        - .spec.volumeClaimTemplates
+        - .spec.updateStrategy
   destination:
     namespace: pocket-id
     server: https://kubernetes.default.svc
