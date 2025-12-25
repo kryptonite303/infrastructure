@@ -1,0 +1,9 @@
+apiVersion: v2
+name: bazarr
+description: Self hosted bazarr
+version: 1.0.0
+type: application
+dependencies:
+  - name: app-template
+    version: 4.5.0
+    repository: https://bjw-s-labs.github.io/helm-charts
