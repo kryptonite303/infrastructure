@@ -1,0 +1,9 @@
+apiVersion: v2
+name: jellyfin
+description: Self hosted jellyfin
+version: 1.0.0
+type: application
+dependencies:
+  - name: jellyfin
+    version: 2.7.0
+    repository: https://jellyfin.github.io/jellyfin-helm

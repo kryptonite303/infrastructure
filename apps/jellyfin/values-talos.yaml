@@ -1,0 +1,21 @@
+jellyfin:
+  ingress:
+    enabled: true
+    className: traefik
+    hosts:
+      - host: jellyfin.k8s.johnchen.dev
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    tls:
+      - secretName: wildcard-tls-secret
+        hosts:
+          - jellyfin.k8s.johnchen.dev
+  persistence:
+    cache:
+      enabled: true
+  resources:
+    limits:
+      nvidia.com/gpu: 1
+  nodeSelector:
+    runtimeClassName: nvidia
