@@ -14,5 +14,7 @@ jellyfin:
   persistence:
     cache:
       enabled: true
+    media:
+      size: 200Gi
   nodeSelector:
     runtimeClassName: nvidia
