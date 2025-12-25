@@ -48,6 +48,11 @@ immich:
   machine-learning:
     controllers:
       main:
+        containers:
+          main:
+            image:
+              repository: ghcr.io/immich-app/immich-machine-learning
+              tag: v2.4.1-cuda
         pod:
           nodeSelector:
             node-role.kubernetes.io/gpu: "true"
