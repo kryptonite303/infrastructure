@@ -53,6 +53,9 @@ immich:
             image:
               repository: ghcr.io/immich-app/immich-machine-learning
               tag: v2.4.1-cuda
+            resources:
+              limits:
+                nvidia.com/gpu: 1
         pod:
           nodeSelector:
-            node-role.kubernetes.io/gpu: "true"
+            runtimeClassName: nvidia
