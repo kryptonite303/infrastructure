@@ -16,5 +16,6 @@ jellyfin:
       enabled: true
     media:
       size: 200Gi
+      accessMode: ReadWriteMany
   nodeSelector:
     runtimeClassName: nvidia

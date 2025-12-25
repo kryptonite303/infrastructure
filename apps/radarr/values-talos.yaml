@@ -31,11 +31,7 @@ app-template:
       accessMode: ReadWriteOnce
     downloads:
       enabled: true
-      storageClass: nfs
-      size: 5Gi
-      globalMounts:
-        - path: /downloads
-      accessMode: ReadWriteOnce
+      existingClaim: "pvc-ed2e0d35-19e5-4c97-b7d7-6c858c8b7b77"
   ingress:
     main:
       enabled: true
