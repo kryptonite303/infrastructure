@@ -20,6 +20,9 @@ immich:
   server:
     controllers:
       main:
+        pod:
+          nodeSelector:
+            node-role.kubernetes.io/gpu: "true"
         containers:
           main:
             image:
@@ -41,3 +44,10 @@ immich:
     persistence:
       library:
         existingClaim: "immich"
+
+  machine-learning:
+    controllers:
+      main:
+        pod:
+          nodeSelector:
+            node-role.kubernetes.io/gpu: "true"
