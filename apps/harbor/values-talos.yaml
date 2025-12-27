@@ -21,3 +21,7 @@ harbor:
         storageClass: nfs
   updateStrategy:
     type: Recreate
+  jobservice:
+    revisionHistoryLimit: 1
+  core:
+    revisionHistoryLimit: 1
