@@ -17,6 +17,7 @@ app-template:
             PAPERLESS_URL: https://paperless.k8s.johnchen.dev
             PAPERLESS_CONSUMPTION_DIR: /usr/src/paperless/consume
             PAPERLESS_REDIRECT_LOGIN_TO_SSO: true
+            PAPERLESS_APPS: allauth.socialaccount.providers.openid_connect
           envFrom:
             - secretRef:
                 name: paperless
