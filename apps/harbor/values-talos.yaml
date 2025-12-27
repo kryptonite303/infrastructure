@@ -19,3 +19,5 @@ harbor:
         storageClass: nfs
       trivy:
         storageClass: nfs
+  updateStrategy:
+    type: Recreate
