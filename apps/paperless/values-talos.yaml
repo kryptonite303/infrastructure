@@ -16,6 +16,7 @@ app-template:
             PAPERLESS_DBENGINE: postgresql
             PAPERLESS_URL: https://paperless.k8s.johnchen.dev
             PAPERLESS_CONSUMPTION_DIR: /usr/src/paperless/consume
+            PAPERLESS_REDIRECT_LOGIN_TO_SSO: true
   service:
     main:
       controller: main
