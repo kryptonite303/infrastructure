@@ -20,7 +20,7 @@ headscale:
           paths:
             - path: /web
               service:
-                port: 9090
+                port: 9080
       tls:
         - secretName: wildcard-tls-secret
           hosts:
@@ -33,12 +33,12 @@ headscale:
       image: ghcr.io/gurucomputing/headscale-ui:latest
       ports:
         - name: http
-          containerPort: 9090
+          containerPort: 9080
       env:
-        HTTP_PORT: 9090
+        HTTP_PORT: 9080
         HTTPS_PORT: 9443
   service:
     main:
       ports:
         ui:
-          port: 9090
+          port: 9080
