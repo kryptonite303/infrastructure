@@ -1,6 +1,7 @@
 headscale:
   env:
     #HEADSCALE_DNS_BASE_DOMAIN: johnchen.dev
+    HEADSCALE_PREFIXES_V4: 100.64.0.0/10
   ingress:
     main:
       enabled: true
