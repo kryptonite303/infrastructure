@@ -1,0 +1,17 @@
+headscale:
+  env:
+    HEADSCALE_DNS_BASE_DOMAIN: johnchen.dev
+  ingress:
+    main:
+      enabled: true
+      hosts:
+        - host: headscale.k8s.johnchen.dev
+          paths:
+            - path: /
+      tls:
+        - secretName: wildcard-tls-secret
+          hosts:
+            - headscale.k8s.johnchen.dev
+  persistence:
+    config:
+      enabled: true

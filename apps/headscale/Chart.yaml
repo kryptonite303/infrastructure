@@ -1,0 +1,9 @@
+apiVersion: v2
+name: headscale
+description: Self hosted headscale
+version: 1.0.0
+type: application
+dependencies:
+  - name: headscale
+    version: 0.16.0
+    repository: https://charts.gabe565.com
