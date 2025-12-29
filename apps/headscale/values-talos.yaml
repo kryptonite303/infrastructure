@@ -9,6 +9,8 @@ headscale:
         - host: headscale.k8s.johnchen.dev
           paths:
             - path: /
+              service:
+                port: 8080
       tls:
         - secretName: wildcard-tls-secret
           hosts:
