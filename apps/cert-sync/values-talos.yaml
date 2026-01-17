@@ -1,0 +1,16 @@
+app-template:
+  controllers:
+    main:
+      type: cronjob
+      containers:
+        main:
+          image:
+            repository: harbor.k8s.johnchen.dev/library/cert-sync
+            tag: latest
+  persistence:
+    ssh-key:
+      enabled: true
+      type: secret
+      name: ssh-key
+      mountPath: /root
+      subPath: ssh-key
