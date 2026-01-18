@@ -13,12 +13,13 @@ app-template:
           command:
             - /bin/sh
             - -c
-            - scp wildcard-tls-secret 
+            - scp -i /root/ssh-key/ssh-key /root/wildcard-tls-secret/tls.crt root@192.168.1.210:/root/tls.crt
   persistence:
     ssh-key:
       enabled: true
       type: secret
       name: ssh-key
+      defaultMode: 0600
       globalMounts:
         - path: /root/ssh-key
           readOnly: true
