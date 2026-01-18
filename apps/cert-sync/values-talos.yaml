@@ -9,7 +9,7 @@ app-template:
         main:
           image:
             repository: harbor.k8s.johnchen.dev/library/cert-sync
-            tag: latest
+            tag: 0.1
           command:
             - /bin/sh
             - -c

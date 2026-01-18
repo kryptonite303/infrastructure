@@ -1,3 +1,3 @@
 FROM alpine
 
-RUN apk add openssl
+RUN apk add openssh
