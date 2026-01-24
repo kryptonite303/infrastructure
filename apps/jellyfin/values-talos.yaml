@@ -19,3 +19,5 @@ jellyfin:
       accessMode: ReadWriteMany
   nodeSelector:
     runtimeClassName: nvidia
+  securityContext:
+    runAsUser: 501
