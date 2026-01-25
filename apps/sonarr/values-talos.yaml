@@ -8,6 +8,8 @@ app-template:
           image:
             repository: linuxserver/sonarr
             tag: 4.0.16-develop
+          env:
+            PUID: 501
   service:
     main:
       controller: main
