@@ -4,6 +4,8 @@ immich:
       containers:
         main:
           image:
+            #repository: harbor.k8s.johnchen.dev/library/immich
+            repository: ghcr.io/immich-app/immich-server
             tag: v2.5.2
           env:
             DB_HOSTNAME: immich-rw
