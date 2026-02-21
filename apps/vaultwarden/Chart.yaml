@@ -5,5 +5,5 @@ version: 1.0.0
 type: application
 dependencies:
   - name: vaultwarden
-    version: 0.34.4
+    version: 0.34.6
     repository: https://guerzon.github.io/vaultwarden
