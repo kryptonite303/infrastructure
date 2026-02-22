@@ -27,3 +27,4 @@ kube-prometheus-stack:
         contains(groups[*], 'editor') && 'Editor' ||
         'Viewer'
       allow_assign_grafana_admin: true
+      groups_attribute_path: groups
