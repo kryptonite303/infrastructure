@@ -26,3 +26,4 @@ kube-prometheus-stack:
         contains(groups[*], 'admin') && 'Admin' ||
         contains(groups[*], 'editor') && 'Editor' ||
         'Viewer'
+      allow_assign_grafana_admin: true
