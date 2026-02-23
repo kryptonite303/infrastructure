@@ -22,9 +22,9 @@ kube-prometheus-stack:
         token_url: http://pocket-id.k8s.johnchen.dev/api/oidc/token
         api_url: http://pocket-id.k8s.johnchen.dev/api/oidc/userinfo
         use_pkce: true
-      role_attribute_path: >
-        contains(groups[*], 'admin') && 'Admin' ||
-        contains(groups[*], 'editor') && 'Editor' ||
-        'Viewer'
-      allow_assign_grafana_admin: true
-      groups_attribute_path: groups
+        role_attribute_path: >
+          contains(groups[*], 'admin') && 'Admin' ||
+          contains(groups[*], 'editor') && 'Editor' ||
+          'Viewer'
+        allow_assign_grafana_admin: true
+        groups_attribute_path: groups
