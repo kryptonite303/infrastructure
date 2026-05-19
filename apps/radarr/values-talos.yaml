@@ -8,6 +8,8 @@ app-template:
           image:
             repository: linuxserver/radarr
             tag: 6.1.0-nightly
+          env:
+            PUID: 501
   service:
     main:
       controller: main
