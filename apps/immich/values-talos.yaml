@@ -6,7 +6,7 @@ immich:
           image:
             #repository: harbor.k8s.johnchen.dev/library/immich
             repository: ghcr.io/immich-app/immich-server
-            tag: v3.0.0
+            tag: v3.2.4
           env:
             DB_HOSTNAME: immich-rw
             DB_USERNAME: postgres
