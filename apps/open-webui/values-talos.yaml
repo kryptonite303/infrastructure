@@ -1,0 +1,42 @@
+app-template:
+  controllers:
+    main:
+      type: deployment
+      replicas: 1
+      containers:
+        main:
+          image:
+            repository: ghcr.io/open-webui/open-webui
+            tag: "v0.11.4"
+          env:
+            TZ: America/New_York
+  service:
+    main:
+      controller: main
+      ports:
+        http:
+          port: 8080
+  persistence:
+    data:
+      enabled: true
+      storageClass: nfs
+      size: 10Gi
+      globalMounts:
+        - path: /app/backend/data
+      accessMode: ReadWriteOnce
+  ingress:
+    main:
+      enabled: true
+      className: traefik
+      hosts:
+        - host: open-webui.k8s.johnchen.dev
+          paths:
+            - path: /
+              pathType: Prefix
+              service:
+                name: open-webui
+                port: 8080
+      tls:
+        - secretName: wildcard-tls-secret
+          hosts:
+            - open-webui.k8s.johnchen.dev
