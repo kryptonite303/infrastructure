@@ -10,6 +10,27 @@ app-template:
             tag: "v0.11.4-slim"
           env:
             TZ: America/New_York
+          probes:
+            liveness:
+              enabled: true
+              path: /health
+              port: 8080
+              type: HTTP
+              spec:
+                initialDelaySeconds: 60
+                periodSeconds: 30
+                timeoutSeconds: 5
+                failureThreshold: 3
+            readiness:
+              enabled: true
+              path: /health
+              port: 8080
+              type: HTTP
+              spec:
+                initialDelaySeconds: 10
+                periodSeconds: 10
+                timeoutSeconds: 5
+                failureThreshold: 6
   service:
     main:
       controller: main
