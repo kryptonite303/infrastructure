@@ -3,6 +3,26 @@ argo-cd:
     domain: argocd.k8s.johnchen.dev
   dex:
     servicePortHttpName: tcp
+    livenessProbe:
+      enabled: true
+      httpPath: /healthz/live
+      httpPort: metrics
+      httpScheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      timeoutSeconds: 1
+      successThreshold: 1
+      failureThreshold: 3
+    readinessProbe:
+      enabled: true
+      httpPath: /healthz/ready
+      httpPort: metrics
+      httpScheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      timeoutSeconds: 1
+      successThreshold: 1
+      failureThreshold: 3
   configs:
     params:
       server.insecure: true
